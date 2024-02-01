@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil Pengguna</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .profile {
+            width: 300px; /* Atur lebar sesuai kebutuhan */
+            margin: 20px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-group i {
+            margin-right: 10px;
+            color: #555; /* Ubah warna ikon sesuai kebutuhan */
+        }
+
+        .input-group input, 
+        .note-display {
+            flex: 1;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .note-display textarea{
+            width: 100%;
+            resize: vertical;
+            margin: 0 auto; /* Menengahkan textarea */
+        }
+    </style>
+    </style>
+  <div class="container">
+    <div class="Mengedit">
+        <img src="bmg.7.jpeg" alt="Gambar Profil">
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="namaInput" placeholder="Masukkan Nama">
+        </div>
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="emailInput" placeholder="Masukkan Email">
+        </div>
+        <div class="input-group">
+            <i class="fas fa-address-card"></i>
+            <input type="text" id="alamatInput" placeholder="Masukkan Alamat">
+        </div>
+        <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input type="tel" id="teleponInput" placeholder="Masukkan Nomor Telepon">
+        </div>
+        <div class="note-display">
+            <textarea class="note" placeholder="Tambahkan Bio Anda......................."></textarea>
+        </div>
+        <button class="save-fonts">Simpan</button>
+    </div>
+</div>
+  </div>
+  <script>
+    function saveData() {
+        // Mengumpulkan nilai dari setiap elemen formulir
+        var nama = document.getElementById('namaInput').value;
+        var email = document.getElementById('emailInput').value;
+        var alamat = document.getElementById('alamatInput').value;
+        var telepon = document.getElementById('teleponInput').value;
+        var bio = document.querySelector('.note').value;
+
+        // Lakukan sesuatu dengan nilai-nilai yang dikumpulkan
+        // Contoh: Simpan ke database, tampilkan di console, dll.
+        console.log("Nama:", nama);
+        console.log("Email:", email);
+        console.log("Alamat:", alamat);
+        console.log("Telepon:", telepon);
+        console.log("Bio:", bio);
+
+        // Atau Anda bisa menyimpannya ke server menggunakan teknik seperti AJAX
+        // Contoh menggunakan fetch untuk mengirim data ke server
+        /*
+        fetch('url_simpan_data.php', {
+            method: 'POST',
+            body: JSON.stringify({
+                nama: nama,
+                email: email,
+                alamat: alamat,
+                telepon: telepon,
+                bio: bio
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Data berhasil disimpan:', data);
+            // Lakukan tindakan lain setelah data disimpan
+        })
+        .catch(error => {
+            console.error('Terjadi kesalahan:', error);
+        });
+        */
+    }
+</script>
+</body>
+</html>

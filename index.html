@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Sidebar Menu  | Dashboard </title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-menu' id="btn" ></i>
+      <span class="tooltip"></menu</span>
+        <div class="logo_name">Dashboard</div>
+        <div class="close-btn" onclick="closeSidebar()">&times;</div>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="profil.html">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Profil</span>
+        </a>
+         <span class="tooltip">Profil</span>
+      </li>
+      <li>
+       <a href="pemilahan sampah.html">
+        <i class='bx bx-recycle'></i>
+         <span class="links_name">Pemilahan Sampah</span>
+       </a>
+       <span class="tooltip">Pemilahan Sampah</span>
+     </li>
+     <li>
+       <a href="jenis sampah.html">
+        <i class='bx bx-trash'></i>
+         <span class="links_name">Jenis Sampah</span>
+       </a>
+       <span class="tooltip">Jenis Sampah</span>
+     </li>
+     <li>
+       <a href="jadwal pembuangan.html">
+        <i class='bx bxs-time'></i>
+         <span class="links_name">Jadwal Pembuangan</span>
+       </a>
+       <span class="tooltip">Jadwal Pembuangan</span>
+     </li>
+     <li>
+       <a href="lokasi pembuangan.html">
+        <i class='bx bx-map' ></i>
+         <span class="links_name">Lokasi Pembuangan</span>
+       </a>
+       <span class="tooltip">Files</span>
+     </li>
+     <li>
+       <a href="point penghargaan.html">
+        <i class='bx bx-medal'></i>
+         <span class="links_name">Poin Penghargaan</span>
+       </a>
+       <span class="tooltip">Poin Penghargaan</span>
+     </li>
+     <li>
+       <a href="panduan pengguna.html">
+        <i class='bx bxs-hand-down'></i>
+         <span class="links_name">Panduan Pengguna</span>
+       </a>
+       <span class="tooltip">Panduan Pengguna</span>
+     </li>
+     <li>
+       <a href="pengaturan.html">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">pengaturan</span>
+       </a>
+       <span class="tooltip">pengaturan</span>
+     </li>
+     <div class="logout-icon">
+      <!-- Icon untuk logout -->
+      <a href="logout.html" onclick="logout()">
+          <i class='bx bx-log-out'></i>
+          <span class="tooltip">Logout</span>
+      </a>
+  </div>
+</div>
+</li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="social-icons">
+        <a href="https://www.facebook.com/nama_akun_facebook" target="_blank"><i class="bx bxl-facebook-square"></i></a>
+        <a href="https://www.instagram.com/nama_akun_instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+        <a href="https://twitter.com/nama_akun_twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/nama_channel_youtube" target="_blank"><i class="bx bxl-youtube"></i></a>
+    </div>
+    <div class="text-with-image">
+    <img src="bg.0.png" alt="Deskripsi Gambar">
+    <div class="text">EcoSort</div>
+    <div class="welcome-message">
+        <h2>Selamat Datang!</h2>
+        <p>Terima kasih telah mengunjungi EcoSort.</p>
+        <p>Kami peduli terhadap lingkungan dan berkomitmen untuk</p>
+        <p>keberlanjutan lingkungan.</p>
+    </div>
+
+    <div class="profile"></div>
+</section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  searchBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange(); 
+  });
+
+  
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+</body>
+</html>
